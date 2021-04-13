@@ -3,7 +3,7 @@ const session = require("express-session");
 const exphbs = require("express-handlebars");
 const helpers = require("./utils/helpers");
 const path = require("path");
-// const controllers = require("./controllers");
+const controllers = require("./controllers");
 
 const sequelize = require("./config/connection.js");
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -36,7 +36,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-// app.use(controllers);
+app.use(controllers);
 
 sequelize.sync({ force: false }).then(() => {
     http.listen(PORT, () => console.log(`Listening on the coolest PORT ${PORT}`));
