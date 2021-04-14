@@ -1,0 +1,23 @@
+<div class="dashboard">
+    <h1>
+        <h2 class="has-text-centered is-size-1">
+            User Dashboard
+        </h2>
+        <div class="column ml-6">
+            <button class="button is-success"><a href="/createPost">Create New Blog</a></button>
+        </div>
+    </h1>
+    <h1>
+        <h2 class="has-text-centered is-size-2">
+            My Blog Posts
+        </h2>
+        <div>
+            {{#each user.posts as |post|}}
+            <div class="column" id="blogs">
+                <h1 id="blog-title"><strong>{{post.title}}</strong></h1>
+                <p>{{post.description}}</p>
+            </div>
+            {{/each}}
+        </div>
+    </h1>
+</div>

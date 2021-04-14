@@ -1,5 +1,5 @@
 body, html {
-    background-color: blanchedalmond;
+    background-color:tan;
 }
 
 .navbar {
@@ -7,10 +7,6 @@ body, html {
     min-height: unset;
     height: 8.25rem;
     margin-bottom: 6px;
-}
-
-#navbarBasicExample {
-    flex-direction: column;
 }
 
 .navbar-item {
@@ -22,5 +18,9 @@ body, html {
    border-style: solid;
    border-width:thick;
    margin: 5px;
+}
+
+a {
+    color:white
 }
 
