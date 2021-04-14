@@ -1,6 +1,8 @@
 <div>
-    {{#each posts}}
-    <h1>{{title}}</h1>
-    <p>{{description}}</p>
+    {{#each posts as |post|}}
+    <div class="column" id="blogs">
+        <h1 id="blog-title"><strong>{{post.title}}</strong></h1>
+        <p>{{post.description}}</p>
+    </div>
     {{/each}}
 </div>

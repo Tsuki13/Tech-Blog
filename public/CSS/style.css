@@ -1,0 +1,26 @@
+body, html {
+    background-color: blanchedalmond;
+}
+
+.navbar {
+    background-color: rgb(34, 33, 33);
+    min-height: unset;
+    height: 8.25rem;
+    margin-bottom: 6px;
+}
+
+#navbarBasicExample {
+    flex-direction: column;
+}
+
+.navbar-item {
+    height: 4rem;
+}
+
+#blogs {
+   border:black;
+   border-style: solid;
+   border-width:thick;
+   margin: 5px;
+}
+

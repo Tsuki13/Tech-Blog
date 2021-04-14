@@ -10,8 +10,7 @@
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     {{!-- bulma --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-
-    <title>Tech Blog Home Page</title>
+    <link rel="stylesheet" href="/CSS/style.css">
 </head>
 
 <body>
@@ -27,16 +26,18 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-                <a href="/" class="navbar-item has-text-black">
+                <a href="/" class="navbar-item has-text-grey-lighter">
                     Home
                 </a>
                 {{#if loggedIn}}
-                <a href="/dashboard" class="navbar-item has-text-black">
+                <a href="/dashboard" class="navbar-item has-text-grey-lighter">
                     Dashboard
                 </a>
                 {{/if}}
             </div>
-
+            <div>
+                <title>The Tech Blog</title>
+            </div>
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
