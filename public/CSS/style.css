@@ -1,5 +1,5 @@
 body, html {
-    background-color:tan;
+    background-color: wheat;
 }
 
 .navbar {
@@ -24,3 +24,8 @@ a {
     color:white
 }
 
+.custom-flex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
