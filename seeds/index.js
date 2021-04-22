@@ -7,7 +7,7 @@ const postData = require("./blogPosts-seeds.json");
 
 const seedDatabase = async () => {
     try {
-        await sequelize.sync({ force: false });
+        await sequelize.sync({ force: true });
 
         await User.bulkCreate(userData, {
             individualHooks: true,
