@@ -16,8 +16,12 @@
             <div class="column" id="blogs">
                 <h1 id="blog-title"><strong>{{post.title}}</strong></h1>
                 <p>{{post.description}}</p>
+                <button class="button is-success"><a href='/posts/{{post.id}}'>View this Blog</a></button>
+                <button data-post={{post.id}} class="button is-danger deleteBtn">Delete this Blog</button>
             </div>
             {{/each}}
         </div>
     </h1>
 </div>
+
+<script src="/JS/script.js"></script>
