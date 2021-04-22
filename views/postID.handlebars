@@ -1,0 +1,15 @@
+<h1>
+    <h2 class="has-text-centered is-size-2">
+
+    </h2>
+    <div>
+        <div class="column" id="blogs">
+            <h1 id="blog-title"><strong>{{post.title}}</strong></h1> <span>Posted By:
+                {{post.user.first_name}}</span>
+            <p>{{post.description}}</p>
+            <button class="button is-success"><a href='/updatePost/{{post.id}}'>Update this Blog</a></button>
+        </div>
+    </div>
+</h1>
+
+<script src="/JS/script.js"></script>
