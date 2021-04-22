@@ -30,12 +30,11 @@ router.post('/', async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
-
     try {
         const posts = await Posts.update(
             {
                 title: req.body.title,
-                description: req.bodydescription,
+                description: req.body.description,
             },
             {
                 where: {
