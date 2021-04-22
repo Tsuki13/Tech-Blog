@@ -66,5 +66,72 @@ router.get("/createPost", authCheck, async (req, res) => {
     }
 });
 
+router.get("/updatePost/:id", authCheck, async (req, res) => {
+    try {
+
+        const postData = await Posts.findOne({
+            where: { id: req.params.id },
+            include: { model: User }
+        });
+
+        const post = postData.get({ plain: true });
+
+        res.render("updatePost", {
+            post,
+            loggedIn: req.session.loggedIn,
+            user_id: req.session.user_id
+        });
+
+    } catch (e) {
+        res.status(500).json(e);
+    }
+});
+
+router.get("/posts/:id", async (req, res) => {
+    try {
+        const postData = await Posts.findOne({
+            where: { id: req.params.id },
+            include: { model: User }
+        });
+
+        if (!postData) {
+            res.status(404).send("Could not find post");
+            return;
+        }
+
+        const post = postData.get({ plain: true });
+
+        res.render("postID", {
+            post,
+            loggedIn: req.session.loggedIn,
+            user_id: req.session.user_id
+        })
+    } catch (e) {
+        res.status(500).send(e);
+    }
+});
+
+router.get("/public/:id", async (req, res) => {
+    try {
+        const postData = await Posts.findOne({
+            where: { id: req.params.id },
+            include: { model: User }
+        });
+
+        if (!postData) {
+            res.status(404).send("Could not find post");
+            return;
+        }
+
+        const post = postData.get({ plain: true });
+
+        res.render("publicID", {
+            post,
+            loggedIn: req.session.loggedIn,
+        })
+    } catch (e) {
+        res.status(500).send(e);
+    }
+});
 
 module.exports = router
