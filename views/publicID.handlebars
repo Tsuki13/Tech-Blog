@@ -3,8 +3,9 @@
     </h2>
     <div>
         <div class="column" id="blogs">
-            <h1 id="blog-title"><strong>{{post.title}}</strong></h1> <span>Posted By:
-                {{post.user.first_name}}</span>
+            <span class="nameDate"> Posted By:
+                {{post.user.first_name}} {{post.user.last_name}} {{post.created_at}}</span>
+            <h1 id="blog-title"><strong>{{post.title}}</strong></h1>
             <p>{{post.description}}</p>
         </div>
     </div>

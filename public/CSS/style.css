@@ -29,3 +29,12 @@ a {
     display: flex;
     justify-content: center;
   }
+
+.nameDate {
+    display: flex;
+    float: right;
+}
+
+p {
+    margin-top: 5px;
+}

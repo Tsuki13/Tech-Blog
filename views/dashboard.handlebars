@@ -14,6 +14,8 @@
         <div>
             {{#each user.posts as |post|}}
             <div class="column" id="blogs">
+                <span class="nameDate"> Created:
+                    {{post.created_at}}</span>
                 <h1 id="blog-title"><strong>{{post.title}}</strong></h1>
                 <p>{{post.description}}</p>
                 <button class="button is-success"><a href='/posts/{{post.id}}'>View this Blog</a></button>

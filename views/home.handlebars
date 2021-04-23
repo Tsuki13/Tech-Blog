@@ -4,6 +4,9 @@
 <div>
     {{#each posts as |post|}}
     <div class="column" id="blogs">
+        <span class="nameDate"> Posted By:
+            {{post.user.first_name}} {{post.user.last_name}} At: {{post.created_at}}</span>
+
         <h1 id="blog-title"><strong>{{post.title}}</strong></h1>
         <p>{{post.description}}</p>
         <button class="button is-success"><a href='/public/{{post.id}}'>View this Blog</a></button>
