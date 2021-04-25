@@ -7,9 +7,12 @@
         <div class="text ml-2">
             {{comment_text}}
         </div>
+        {{#if loggedIn}}
         <div> <button type="deleteCommentBtn" class="button is-danger ml-3 deleteCommentBtns" data-id={{this.id}}>Delete
                 this
-                Comment</button></div>
+                Comment</button>
+        </div>
+        {{/if}}
     </div>
     {{/each}}
 </div>
