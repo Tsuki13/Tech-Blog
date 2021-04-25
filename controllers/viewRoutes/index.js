@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Posts } = require("../../models");
+const { User, Posts, Comment } = require("../../models");
 const { authCheck } = require("../../utils/auth");
 
 
@@ -91,7 +91,8 @@ router.get("/posts/:id", async (req, res) => {
     try {
         const postData = await Posts.findOne({
             where: { id: req.params.id },
-            include: { model: User }
+            include: [{ model: User },
+            { model: Comment, include: { model: User } }]
         });
 
         if (!postData) {
@@ -115,7 +116,8 @@ router.get("/public/:id", async (req, res) => {
     try {
         const postData = await Posts.findOne({
             where: { id: req.params.id },
-            include: { model: User }
+            include: [{ model: User },
+            { model: Comment, include: { model: User } }]
         });
 
         if (!postData) {

@@ -1,14 +1,13 @@
 const { Comment } = require("../../models");
-const { authCheck } = require("../../utils/auth");
 const router = require("express").Router();
 
-router.post("/", authCheck, (req, res) => {
+router.post("/", async (req, res) => {
     try {
 
         const comment = await Comment.create({
-            comment_text: req.body.comment_text,
+            comment_text: req.body.commentText,
             user_id: req.session.user_id,
-            posts_id: req.body.posts_id
+            posts_id: req.body.postID
         });
 
         res.status(201).json(comment);
@@ -17,7 +16,7 @@ router.post("/", authCheck, (req, res) => {
     }
 })
 
-router.delete("/:id", authCheck, (req, res) => {
+router.delete("/:id", async (req, res) => {
     try {
         const commentDelete = await Comment.destroy({
             where: {
