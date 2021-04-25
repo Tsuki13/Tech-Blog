@@ -12,9 +12,15 @@
         "posts_id": 1
     },
     {
-        "id": 1,
-        "comment_text": "Test comment from Raquel",
+        "id": 3,
+        "comment_text": "Test comment 2 from Raquel",
         "user_id": 1,
+        "posts_id": 2
+    },
+    {
+        "id": 4,
+        "comment_text": "Test comment 2 from User Two",
+        "user_id": 2,
         "posts_id": 2
     }
 ]
